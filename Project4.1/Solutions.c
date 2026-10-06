@@ -48,4 +48,13 @@ void chatter_messages (int number_rolls, int win_loss_neither, double initial_ba
 {
 return 0;
 }
-//Is the Funtion Prototype For No.10
+//Is the Funtion Prototype For No.11
+double double_Or_Nothing (double bank_balance, double wager_amount, int add_or_subtract)
+{
+return 0;
+}
+//Is the Funtion Prototype For No.12
+void save_game_results (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance)
+{
+return 0;
+}

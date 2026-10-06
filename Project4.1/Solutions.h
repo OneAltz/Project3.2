@@ -24,6 +24,13 @@ int is_point_loss_or_neither (int sum_dice, int point_value)
 double adjust_bank_balance (double bank_balance, double wager_amount, int add_or_subtract)
 //Is the Funtion Prototype For No.10
 void chatter_messages (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance)
-//Is the Funtion Prototype For No.10
-
+//Is the Funtion Prototype For No.11
+double double_Or_Nothing (double bank_balance, double wager_amount, int add_or_subtract)
+//Is the Funtion Prototype For No.12
+void save_game_results (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance)
+//Is the Funtion Prototype For No.13
+void Chatter_Messages_Win_Loss (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance)
+//Is the Funtion Prototype For No.14
+void Chatter_messages_Low_Bank (double current_bank_balance)
+//Is the Funtion Prototype For No.15
 #endif
