@@ -1,0 +1,64 @@
+Maybe for Save
+// Source - https://stackoverflow.com/a/5902983
+// Posted by orlp
+// Retrieved 2026-10-06, License - CC BY-SA 3.0
+
+char filename[128]; // (128-1) characters is the max filename length
+FILE *file;
+
+int i;
+for (i = 0; i < 10; ++i) {
+    snprintf(filename, 128, "file%02d", i);
+    file = fopen(filename);
+
+    // do stuff with file
+
+    fclose(file);
+}
+//Ask porter
+
+
+
+//Is the Funtion Prototype For No.11
+int save_game(const char *filename, double bank_balance)
+{
+    FILE *file = fopen(save.txt, "w");  
+    if (file == NULL) {
+        printf("Could not save game");//perror?
+        return 0;
+    }
+
+    if (fprintf(file, "%.2f\n", bank_balance) < 0) {
+        printf("Could not write game file");//perror?
+        fclose(file);
+        return 0;
+    }
+
+    if (fclose(file) == EOF) {
+        printf("Could not close game file"); //perror?
+        return 0;
+    }
+
+    return 1;
+}
+//Is the Funtion Prototype For No.12
+int load_game(const char *filename, double *bank_balance)
+{
+    FILE *file = fopen(filename, "r");
+    if (file == NULL) {
+        printf("Could not load game");//perror?
+        return 0;
+    }
+
+    double loaded_balance;
+    if (fscanf(file, "%lf", &loaded_balance) != 1 || loaded_balance < 0) {
+        fprintf(stderr, "Game file is invalid.\n");
+        fclose(file);
+        return 0;
+    }
+
+    fclose(file);
+    *bank_balance = loaded_balance;
+    return 1;
+}
+

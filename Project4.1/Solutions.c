@@ -1,3 +1,5 @@
+#include "Solutions.h"
+
 //This Is the Funtion Prototype For No.1
 void print_game_rules (void)
 {
@@ -94,32 +96,54 @@ return 0;
 }
 
 //Is the Funtion Prototype For No.10
-double double_or_nothing (double bank_balance, double wager_amount, int add_or_subtract)
+double double_Or_Nothing(double wager_amount, int won, int *consecutive_wins)
 {
-    return adjust_bank_balance(bank_balance, wager_amount, add_or_subtract);
+    if (!won) {
+        *consecutive_wins = 0;
+        return 0.0;
+    }
+    ++*consecutive_wins;
+    if (*consecutive_wins < 2) {
+        return 0.0;  // First win: wait for the next result
+    }
+    *consecutive_wins = 0;
+    return wager_amount * 2.5;  // Payout after the second consecutive win
 }
-//Is the Funtion Prototype For No.11
-void save_game_results (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance)
-{
-return 0;
-}
-//Is the Funtion Prototype For No.12
+
+//Is the Funtion Prototype For No.13
 void Chatter_Messages_Win_Loss (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance)
 {
-return 0;
-}
-//Is the Funtion Prototype For No.13
-void Chatter_messages_Low_Bank (double current_bank_balance)
-{
+    if (win_loss_neither == 1) {
+        printf("You won.... Your Such a LOSER\n");
+    } else if (win_loss_neither == 0) {
+        printf("I Knew you would lose\n");
+    }
 return 0;
 }
 //Is the Funtion Prototype For No.14
-void Chatter_messages_High_Bank (double current_bank_balance)
+void Chatter_messages_Low_Bank (double current_bank_balance)
 {
+    if (current_bank_balance < 50) 
+    {
+        printf("Your bank balance is looking a little low there....\n");
+    }
 return 0;
 }
 //Is the Funtion Prototype For No.15
+void Chatter_messages_High_Bank (double current_bank_balance)
+{
+    if (current_bank_balance > 200) 
+    {
+        printf("Your bank balance is looking quite high there....YOUR CHEATING\n");
+    }
+return 0;
+}
+//Is the Funtion Prototype For No.16
 void Chatter_messages_Neutral (double current_bank_balance)
 {
+    if (current_bank_balance >= 50 && current_bank_balance <= 200) 
+    {
+        printf("Your bank balance is looking quite normal there....LAMO\n");
+    }
 return 0;
 }
