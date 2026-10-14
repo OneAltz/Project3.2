@@ -47,7 +47,7 @@ int check_wager_amount (double wager, double bank_balance)
 //This Is the Funtion Prototype For No.5
 int roll_die (void) 
 {
-    int die_value = (rand() % 6) + 1;
+    int die_value = rand() % 6 + 1;
     return die_value;
 }
 //This Is the Funtion Prototype For No.6
