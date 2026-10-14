@@ -13,7 +13,7 @@ int exit = 0, num = 0, print = 0, index = 0, point_value = 0, add_or_subtract = 
         scanf("%d", &num);
         if(num == 1)
         {
-        print_game_rules (void);
+        print_game_rules ();
         }
         if(num == 2)
         {
@@ -21,9 +21,9 @@ int exit = 0, num = 0, print = 0, index = 0, point_value = 0, add_or_subtract = 
             {
             ++index;
             printf("Do you want to:\n");
-            printf("1. Print Your Bank Balance");
-            printf("2. Roll");
-            printf("3. Cash Out Your Winings");
+            printf("1. Print Your Bank Balance\n");
+            printf("2. Roll\n");
+            printf("3. Cash Out Your Winings\n");
             scanf("%d", &num);
             if(num == 1)
                 {

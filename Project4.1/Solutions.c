@@ -26,7 +26,7 @@ int check_wager_amount (double wager, double bank_balance)
             return -1;
         }
         if (wager == bank_balance){
-            printf("Aren't you a risky boy!\n");
+            printf("Aren't you a risky!\n");
             return -1;
         }
         if (wager < 0){
