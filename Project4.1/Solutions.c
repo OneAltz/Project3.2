@@ -10,20 +10,12 @@ void print_game_rules (void)
     printf("4. The sum of the dice determines if you win, lose, or set a point.\n");
 }
 //This Is the Funtion Prototype For No.2
-double get_bank_balance (bank_balance)
+double get_bank_balance (int bank_balance)
 {
     printf("This is your bank balance %d\n", bank_balance);
-    return 0;
+    return bank_balance;
 }
 //This Is the Funtion Prototype For No.3
-double get_wager_amount (void)
-{
-    printf("Enter your wager amount: ");
-    double wager;
-    scanf("%lf", &wager);
-    return wager;
-    return 0;
-}
 //This Is the Funtion Prototype For No.4
 int check_wager_amount (double wager, double bank_balance) 
 {

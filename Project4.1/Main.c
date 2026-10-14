@@ -13,7 +13,7 @@ int exit = 0, num = 0, print = 0, index = 0, point_value = 0, add_or_subtract = 
         scanf("%d", &num);
         if(num == 1)
         {
-        void print_game_rules (void);
+        print_game_rules (void);
         }
         if(num == 2)
         {
@@ -31,7 +31,9 @@ int exit = 0, num = 0, print = 0, index = 0, point_value = 0, add_or_subtract = 
                 }
                 if (num == 2)
                 {
-                get_wager_amount ();
+                printf("What Is Your Wager Sir.");
+                scanf("%d", &wager);
+                
                 check_wager_amount (wager, bank_balance);
                 int die1_value = roll_die();
                 int die2_value = roll_die();
