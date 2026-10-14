@@ -4,7 +4,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 #include <math.h>
-
+#include <time.h>
 //This Is the Funtion Prototype For No.1
 void print_game_rules (void);
 //This Is the Funtion Prototype For No.2
