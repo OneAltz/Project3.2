@@ -1,5 +1,5 @@
-#ifndef Solutions_h
-#define Solutions_h
+#ifndef SOLUTIONS_H
+#define SOLUTIONS_H
 #define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h> 
 #include <stdlib.h>
@@ -8,11 +8,11 @@
 //This Is the Funtion Prototype For No.1
 void print_game_rules (void);
 //This Is the Funtion Prototype For No.2
-double get_bank_balance (void);
+double get_bank_balance (int bank_balance);
 //This Is the Funtion Prototype For No.3
 double get_wager_amount (void);
 //This Is the Funtion Prototype For No.4
-int check_wager_amount (double wager, double balance); 
+int check_wager_amount (double wager, double bank_balance); 
 //This Is the Funtion Prototype For No.5
 int roll_die (void);
 //This Is the Funtion Prototype For No.6

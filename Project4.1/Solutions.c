@@ -10,9 +10,8 @@ void print_game_rules (void)
     printf("4. The sum of the dice determines if you win, lose, or set a point.\n");
 }
 //This Is the Funtion Prototype For No.2
-double get_bank_balance (void)
+double get_bank_balance (bank_balance)
 {
-    int bank_balance = 100;
     printf("This is your bank balance %d\n", bank_balance);
     return 0;
 }
@@ -26,15 +25,15 @@ double get_wager_amount (void)
     return 0;
 }
 //This Is the Funtion Prototype For No.4
-int check_wager_amount (double wager, double balance) 
+int check_wager_amount (double wager, double bank_balance) 
 {
     do
     {
-        if (wager > balance) {
+        if (wager > bank_balance) {
             printf("Error: Wager amount cannot exceed your bank balance.\n");
             return -1;
         }
-        if (wager == balance){
+        if (wager == bank_balance){
             printf("Aren't you a risky boy!\n");
             return -1;
         }
@@ -43,7 +42,7 @@ int check_wager_amount (double wager, double balance)
             return -1;
         }
         return 0;
-    } while (wager <= balance);
+    } while (wager <= bank_balance);
     
 }
 //This Is the Funtion Prototype For No.5
@@ -86,19 +85,19 @@ int is_point_loss_or_neither (int sum_dice, int point_value)
 return 0;
 }
 //Is the Funtion Prototype For No.9
-double adjust_bank_balance (double bank_balance, double wager_amount, int add_or_subtract)
+double adjust_bank_balance (double bank_balance, double wager, int add_or_subtract)
 {
     if (add_or_subtract >= 1) {
-        bank_balance += wager_amount;
+        bank_balance += wager;
     } else if (add_or_subtract <= -1) {
-        bank_balance -= wager_amount;
+        bank_balance -= wager;
     }
     return bank_balance;
 return 0;
 }
 
 //Is the Funtion Prototype For No.10
-double double_or_nothing (double bank_balance, double wager_amount, int add_or_subtract)
+/*double double_or_nothing (double bank_balance, double wager_amount, int add_or_subtract)
 {
     if (!won) {
         *consecutive_wins = 0;
@@ -111,7 +110,7 @@ double double_or_nothing (double bank_balance, double wager_amount, int add_or_s
     *consecutive_wins = 0;
     return wager_amount * 2.5;  // Payout after the second consecutive win
 }
-
+*/
 //Is the Funtion Prototype For No.13
 void Chatter_Messages_Win_Loss (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance)
 {
