@@ -83,15 +83,14 @@ int is_point_loss_or_neither (int sum_dice, int point_value)
 return 0;
 }
 //Is the Funtion Prototype For No.9
-double adjust_bank_balance (double bank_balance, double wager, int add_or_subtract)
+double adjust_bank_balance (double bank_balance, double wager, int win)
 {
-    if (add_or_subtract >= 1) {
+    if (win == 1) {
         bank_balance += wager;
-    } else if (add_or_subtract <= -1) {
+    } else if (win == -1) {
         bank_balance -= wager;
     }
     return bank_balance;
-return 0;
 }
 
 //Is the Funtion Prototype For No.10

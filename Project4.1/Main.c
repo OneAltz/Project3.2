@@ -42,7 +42,7 @@ srand((unsigned int) time(NULL));
                 int win = is_win_loss_or_point(sum_dice);
                 printf("Did You Win? %d \n", win);
                 is_point_loss_or_neither (sum_dice, point_value);
-                bank_balance = adjust_bank_balance (bank_balance, wager, add_or_subtract);
+                bank_balance = adjust_bank_balance (bank_balance, wager, win);
                 }
                 Chatter_messages_Low_Bank (bank_balance);
                 Chatter_messages_High_Bank (bank_balance);
