@@ -33,4 +33,8 @@ void save_game_results (int number_rolls, int win_loss_neither, double initial_b
 void Chatter_Messages_Win_Loss (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance);
 //Is the Funtion Prototype For No.14
 void Chatter_messages_Low_Bank (double current_bank_balance);
+//Is the Funtion Prototype For No.15
+void Chatter_messages_High_Bank(double bank_balance);
+//Is the Funtion Prototype For No.16
+void Chatter_messages_Neutral(double bank_balance);
 #endif

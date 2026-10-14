@@ -40,7 +40,7 @@ srand((unsigned int) time(NULL));
                 int sum_dice = calculate_sum_dice(die1_value, die2_value);
                 printf("This Is you Die sum %d \n", &sum_dice);
                 int win = is_win_loss_or_point(sum_dice);
-                printf("Did You Win? %d \n", &win);
+                printf("Did You Win? %d \n", win);
                 is_point_loss_or_neither (sum_dice, point_value);
                 bank_balance = adjust_bank_balance (bank_balance, wager, add_or_subtract);
                 }
