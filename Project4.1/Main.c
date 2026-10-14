@@ -38,7 +38,7 @@ srand((unsigned int) time(NULL));
                 printf("This Is Your Second Roll %d \n", die1_value);
                 printf("This Is Your First Roll %d \n", die2_value);
                 int sum_dice = calculate_sum_dice(die1_value, die2_value);
-                printf("This Is you Die sum %d \n", &sum_dice);
+                printf("This Is you Die sum %d \n", sum_dice);
                 int win = is_win_loss_or_point(sum_dice);
                 printf("Did You Win? %d \n", win);
                 is_point_loss_or_neither (sum_dice, point_value);
