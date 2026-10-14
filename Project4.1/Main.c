@@ -9,7 +9,7 @@ int exit = 0, num = 0, print = 0, index = 0, point_value = 0, add_or_subtract = 
         printf("Do you want to:\n");
         printf("1. Print The Rules For The Game\n");
         printf("2. Play The Game.\n");
-        printf("3. Exit The Game.\n");
+        printf("3. Exit The Game.\n\n");
         scanf("%d", &num);
         if(num == 1)
         {
@@ -37,6 +37,8 @@ int exit = 0, num = 0, print = 0, index = 0, point_value = 0, add_or_subtract = 
                 check_wager_amount (wager, bank_balance);
                 int die1_value = roll_die();
                 int die2_value = roll_die();
+                printf("This Is Your Second Roll", &die1_value);
+                printf("This Is Your First Roll", &die2_value);
                 int sum_dice = calculate_sum_dice(die1_value, die2_value);
                 int win = is_win_loss_or_point(sum_dice);
                 is_point_loss_or_neither (sum_dice, point_value);
