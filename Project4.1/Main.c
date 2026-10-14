@@ -35,8 +35,8 @@ int exit = 0, num = 0, print = 0, index = 0, point_value = 0, add_or_subtract = 
                 check_wager_amount (wager, bank_balance);
                 int die1_value = roll_die();
                 int die2_value = roll_die();
-                printf("This Is Your Second Roll %d \n", &die1_value);
-                printf("This Is Your First Roll %d \n", &die2_value);
+                printf("This Is Your Second Roll %d \n", die1_value);
+                printf("This Is Your First Roll %d \n", die2_value);
                 int sum_dice = calculate_sum_dice(die1_value, die2_value);
                 printf("This Is you Die sum %d \n", &sum_dice);
                 int win = is_win_loss_or_point(sum_dice);
