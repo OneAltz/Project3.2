@@ -8,14 +8,13 @@ void print_game_rules (void)
     printf("2. You place a wager, from your bank balance starting at 100$.\n");
     printf("3. You roll two dice.\n");
     printf("4. The sum of the dice determines if you win, lose, or set a point.\n");
-    return 0;
 }
 //This Is the Funtion Prototype For No.2
 double get_bank_balance (void)
 {
     int bank_balance = 100;
     printf("This is your bank balance %d\n", bank_balance);
-    return bank_balance;
+    return 0;
 }
 //This Is the Funtion Prototype For No.3
 double get_wager_amount (void)
@@ -62,11 +61,16 @@ return 0;
 //This Is the Funtion Prototype For No.7
 int is_win_loss_or_point (int sum_dice)
 {
-if (sum_dice == 7 || sum_dice == 11) {
+if (sum_dice == 7 || sum_dice == 11) 
+{
     return 1; // Win
-} else if (sum_dice == 2 || sum_dice == 3 || sum_dice == 12) {
+} 
+else if (sum_dice == 2 || sum_dice == 3 || sum_dice == 12) 
+{
     return -1; // Loss
-} else {
+} 
+else 
+{
     return 0; // Point
 }
     return 0; // Default return, should not be reached
@@ -78,8 +82,6 @@ int is_point_loss_or_neither (int sum_dice, int point_value)
         return 1; // Point
     } else if (sum_dice == 7) {
         return 0; // Loss
-    } else {
-        return -1; // Neither
     }
 return 0;
 }
@@ -96,7 +98,7 @@ return 0;
 }
 
 //Is the Funtion Prototype For No.10
-double double_Or_Nothing(double wager_amount, int won, int *consecutive_wins)
+double double_or_nothing (double bank_balance, double wager_amount, int add_or_subtract)
 {
     if (!won) {
         *consecutive_wins = 0;
@@ -118,7 +120,6 @@ void Chatter_Messages_Win_Loss (int number_rolls, int win_loss_neither, double i
     } else if (win_loss_neither == 0) {
         printf("I Knew you would lose\n");
     }
-return 0;
 }
 //Is the Funtion Prototype For No.14
 void Chatter_messages_Low_Bank (double current_bank_balance)
@@ -127,7 +128,6 @@ void Chatter_messages_Low_Bank (double current_bank_balance)
     {
         printf("Your bank balance is looking a little low there....\n");
     }
-return 0;
 }
 //Is the Funtion Prototype For No.15
 void Chatter_messages_High_Bank (double current_bank_balance)
@@ -136,7 +136,6 @@ void Chatter_messages_High_Bank (double current_bank_balance)
     {
         printf("Your bank balance is looking quite high there....YOUR CHEATING\n");
     }
-return 0;
 }
 //Is the Funtion Prototype For No.16
 void Chatter_messages_Neutral (double current_bank_balance)
@@ -145,5 +144,4 @@ void Chatter_messages_Neutral (double current_bank_balance)
     {
         printf("Your bank balance is looking quite normal there....LAMO\n");
     }
-return 0;
 }
