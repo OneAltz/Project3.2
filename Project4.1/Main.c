@@ -40,16 +40,16 @@ int exit = 0, num = 0, print = 0, index = 0, point_value = 0, add_or_subtract = 
                 printf("This Is Your Second Roll %d \n", &die1_value);
                 printf("This Is Your First Roll %d \n", &die2_value);
                 int sum_dice = calculate_sum_dice(die1_value, die2_value);
+                printf("This Is you Die sum %d \n", &sum_dice);
                 int win = is_win_loss_or_point(sum_dice);
+                printf("Did You Win? %d \n", &win);
                 is_point_loss_or_neither (sum_dice, point_value);
                 adjust_bank_balance (bank_balance, wager, add_or_subtract);
                 }
+                Chatter_messages_Low_Bank (bank_balance);
+                Chatter_messages_High_Bank (bank_balance);
+                Chatter_messages_Neutral (bank_balance);
             }
-        }
-        if(num == 3)
-        {
-        printf("You are about to exit the Game");
-        return 3;
         }
 
     }

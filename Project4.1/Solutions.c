@@ -113,25 +113,25 @@ void Chatter_Messages_Win_Loss (int number_rolls, int win_loss_neither, double i
     }
 }
 //Is the Funtion Prototype For No.14
-void Chatter_messages_Low_Bank (double current_bank_balance)
+void Chatter_messages_Low_Bank (double bank_balance)
 {
-    if (current_bank_balance < 50) 
+    if (bank_balance < 50) 
     {
         printf("Your bank balance is looking a little low there....\n");
     }
 }
 //Is the Funtion Prototype For No.15
-void Chatter_messages_High_Bank (double current_bank_balance)
+void Chatter_messages_High_Bank (double bank_balance)
 {
-    if (current_bank_balance > 200) 
+    if (bank_balance > 200) 
     {
         printf("Your bank balance is looking quite high there....YOUR CHEATING\n");
     }
 }
 //Is the Funtion Prototype For No.16
-void Chatter_messages_Neutral (double current_bank_balance)
+void Chatter_messages_Neutral (double bank_balance)
 {
-    if (current_bank_balance >= 50 && current_bank_balance <= 200) 
+    if (bank_balance >= 50 && bank_balance <= 200) 
     {
         printf("Your bank balance is looking quite normal there....LAMO\n");
     }
