@@ -31,9 +31,7 @@ int exit = 0, num = 0, print = 0, index = 0, point_value = 0, add_or_subtract = 
                 }
                 if (num == 2)
                 {
-                printf("What Is Your Wager Sir.");
-                scanf("%d", &wager);
-                
+                wager = get_wager_amount ();
                 check_wager_amount (wager, bank_balance);
                 int die1_value = roll_die();
                 int die2_value = roll_die();
@@ -44,7 +42,7 @@ int exit = 0, num = 0, print = 0, index = 0, point_value = 0, add_or_subtract = 
                 int win = is_win_loss_or_point(sum_dice);
                 printf("Did You Win? %d \n", &win);
                 is_point_loss_or_neither (sum_dice, point_value);
-                adjust_bank_balance (bank_balance, wager, add_or_subtract);
+                bank_balance = adjust_bank_balance (bank_balance, wager, add_or_subtract);
                 }
                 Chatter_messages_Low_Bank (bank_balance);
                 Chatter_messages_High_Bank (bank_balance);

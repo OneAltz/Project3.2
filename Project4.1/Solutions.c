@@ -16,6 +16,13 @@ double get_bank_balance (int bank_balance)
     return bank_balance;
 }
 //This Is the Funtion Prototype For No.3
+double get_wager_amount (void)
+{
+    printf("Enter your wager amount: ");
+    double wager;
+    scanf("%lf", &wager);
+    return wager;
+}
 //This Is the Funtion Prototype For No.4
 int check_wager_amount (double wager, double bank_balance) 
 {
