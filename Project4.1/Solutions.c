@@ -13,7 +13,7 @@ void print_game_rules (void)
 double get_bank_balance (int bank_balance)
 {
     printf("What Do you Want you Bank Balance To be %d\n", bank_balance);
-    scanf("%d", &bank_balance)
+    scanf("%d", &bank_balance);
     return bank_balance;
 }
 //This Is the Funtion Prototype For No.3
