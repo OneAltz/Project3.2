@@ -2,7 +2,7 @@
 
 int main(void)
 {
-int num = 0, bank_balance = 100, wager = 0, money_back = 2;
+int num = 0, bank_balance = 100, wager = 0, money_back = 2, result = -1;
 srand((unsigned int) time(NULL));
     while  (num != 3)
     {
@@ -37,24 +37,22 @@ srand((unsigned int) time(NULL));
                 printf("This Is Your Second Roll %d \n", die1_value);
                 printf("This Is Your First Roll %d \n", die2_value);
                 int sum_dice = calculate_sum_dice(die1_value, die2_value);
-                printf("This Is you Die sum %d \n", sum_dice);
+                printf("This Is you Die sum %d \n", sum_dice); 
                 int win = is_win_loss_or_point(sum_dice);
                 printf("Did You Win? %d \n", win);
                 if(win == 0)
                 {
-                    while ((money_back != 0) || (money_back != -1))
+                   while (result == -1)
                     {
-                    int die3_value = roll_die();
-                    int die4_value = roll_die();
-                    printf("This Is Your Third Roll %d \n", die3_value);
-                    printf("This Is Your Forth Roll %d \n", die4_value);
-                    int point_value = calculate_sum_dice(die3_value, die4_value);
-                    printf("This Is you Point Value sum %d \n", point_value);
-                    money_back = is_point_loss_or_neither (sum_dice, point_value);
-                    printf("This Is You Money Back Sum %d \n", money_back);
-                    bank_balance = adjust_bank_balance (bank_balance, wager, point_value);
+                    int die3 = roll_die();
+                    int die4 = roll_die();
+                    int sum = calculate_sum_dice(die3, die4);
+                    printf("Third Roll: %d\n", die3);
+                    printf("Fourth Roll: %d\n", die4);
+                    printf("Dice Sum: %d\n", sum);
+                    result = is_point_loss_or_neither(sum, point_value);
+                    printf("Result: %d\n", result);
                     }
-                }
                 bank_balance = adjust_bank_balance (bank_balance, wager, win);
                 get_bank_balance (bank_balance);
                 }
