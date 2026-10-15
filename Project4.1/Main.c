@@ -2,7 +2,7 @@
 
 int main(void)
 {
-int num = 0, bank_balance = 100, wager = 0, money_back = 0, index = 0;
+int num = 0, bank_balance = 100, wager = 0, money_back = 2, index = 0;
 srand((unsigned int) time(NULL));
     while  (num != 3)
     {
