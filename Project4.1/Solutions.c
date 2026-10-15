@@ -77,7 +77,7 @@ int is_point_loss_or_neither (int sum_dice, int point_value)
 {
     if (sum_dice == point_value) {
         return 0; // Point
-    } else if (sum_dice == 7) {
+    } else if (point_value == 7) {
         return -1; // Loss
     }
 return 0;
