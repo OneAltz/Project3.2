@@ -40,6 +40,7 @@ srand((unsigned int) time(NULL));
                 printf("This Is you Die sum %d \n", sum_dice); 
                 int win = is_win_loss_or_point(sum_dice);
                 printf("Did You Win? %d \n", win);
+                
                 int point_value = sum_dice;
                 if(win == 0)
                 {
@@ -54,9 +55,11 @@ srand((unsigned int) time(NULL));
                     result = is_point_loss_or_neither(sum, point_value);
                     printf("Result: %d\n", result);
                     }
-                bank_balance = adjust_bank_balance (bank_balance, wager, win);
+                bank_balance = adjust_bank_balance (bank_balance, wager, result);
                 get_bank_balance (bank_balance);
                 }
+                bank_balance = adjust_bank_balance (bank_balance, wager, win);
+                get_bank_balance (bank_balance);
                 Chatter_messages_Low_Bank (bank_balance);
                 Chatter_messages_High_Bank (bank_balance);
                 Chatter_messages_Neutral (bank_balance);
