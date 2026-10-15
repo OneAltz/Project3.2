@@ -51,6 +51,7 @@ srand((unsigned int) time(NULL));
                     int point_value = calculate_sum_dice(die3_value, die4_value);
                     printf("This Is you Point Value sum %d \n", point_value);
                     money_back = is_point_loss_or_neither (sum_dice, point_value);
+                    printf("This Is You Money Back Sum %d \n", money_back);
                     }
                 }
                 bank_balance = adjust_bank_balance (bank_balance, wager, win);
