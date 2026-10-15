@@ -2,7 +2,7 @@
 
 int main(void)
 {
-int num = 0, bank_balance = 100, wager = 0, money_back = 2, result = -1;
+int num = 0, bank_balance = 100, wager = 0, money_back = 2;
 srand((unsigned int) time(NULL));
     while  (num != 3)
     {
@@ -44,6 +44,7 @@ srand((unsigned int) time(NULL));
                 int point_value = sum_dice;
                 if(win == 0)
                 {
+                    int result = -1;
                     while (result == -1)
                     {
                     int die3 = roll_die();
