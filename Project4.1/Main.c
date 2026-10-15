@@ -41,7 +41,17 @@ srand((unsigned int) time(NULL));
                 printf("This Is you Die sum %d \n", sum_dice);
                 int win = is_win_loss_or_point(sum_dice);
                 printf("Did You Win? %d \n", win);
-                is_point_loss_or_neither (sum_dice, point_value);
+                if(win = 0)
+                {
+                    int die3_value = roll_die();
+                    int die4_value = roll_die();
+                    printf("This Is Your Third Roll %d \n", die3_value);
+                    printf("This Is Your Forth Roll %d \n", die4_value);
+                    int sum_dice = calculate_sum_dice(die3_value, die4_value);
+                    printf("This Is you Die sum %d \n", sum_dice);
+                    int win = is_win_loss_or_point(sum_dice);
+                    is_point_loss_or_neither (sum_dice, point_value);
+                }
                 bank_balance = adjust_bank_balance (bank_balance, wager, win);
                 }
                 Chatter_messages_Low_Bank (bank_balance);
