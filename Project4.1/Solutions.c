@@ -49,7 +49,7 @@ int check_wager_amount (double wager, double bank_balance)
         }
         return 0;
     } while (wager <= bank_balance);
-    
+    return wager;
 }
 //This Is the Funtion Prototype For No.5
 int roll_die (void) 

@@ -2,7 +2,7 @@
 
 int main(void)
 {
-int num = 0, bank_balance = 0, wager = 0;
+int num = 0, bank_balance = 0, wager1 = 0, wager = 0;
 srand((unsigned int) time(NULL));
 bank_balance = set_bank_balance (bank_balance);
 
@@ -32,8 +32,8 @@ bank_balance = set_bank_balance (bank_balance);
                 }
                 if (num == 2)
                 {
-                wager = get_wager_amount ();
-                check_wager_amount (wager, bank_balance);
+                wager1 = get_wager_amount ();
+                wager = check_wager_amount (wager, bank_balance);
                 int die1_value = roll_die();
                 int die2_value = roll_die();
                 printf("This Is Your Second Roll %d \n", die1_value);
