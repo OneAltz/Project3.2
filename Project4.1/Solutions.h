@@ -32,7 +32,7 @@ double double_or_nothing (double bank_balance, double wager_amount, int add_or_s
 //Is the Funtion Prototype For No.12
 void save_game_results (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance);
 //Is the Funtion Prototype For No.13
-void Chatter_Messages_Win_Loss (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance);
+void Chatter_Messages_Win_Loss (int win);
 //Is the Funtion Prototype For No.14
 void Chatter_messages_Low_Bank (double current_bank_balance);
 //Is the Funtion Prototype For No.15
