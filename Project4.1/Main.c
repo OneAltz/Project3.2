@@ -43,11 +43,11 @@ bank_balance = set_bank_balance (bank_balance);
                 int win = is_win_loss_or_point(sum_dice);
                 if (win == 1)
                     {
-                    printf("You Win!\n");
+                    Chatter_Messages_Win_Loss (win);
                     }
                     else if (win == -1)
                     {
-                    printf("You Lose!\n");
+                    Chatter_Messages_Win_Loss (win);
                     }
                 
                 int point_value = sum_dice;
@@ -67,18 +67,17 @@ bank_balance = set_bank_balance (bank_balance);
                     }
                     if (result == 1)
                     {
-                    printf("You Win!\n");
+                    Chatter_Messages_Win_Loss (result);
                     }
                     else if (result == -1)
                     {
-                    printf("You Lose!\n");
+                    Chatter_Messages_Win_Loss (result);
                     }
                 bank_balance = adjust_bank_balance (bank_balance, wager, result);
                 get_bank_balance (bank_balance);
                 }
                 bank_balance = adjust_bank_balance (bank_balance, wager, win);
                 get_bank_balance (bank_balance);
-                Chatter_Messages_Win_Loss (win);
                 Chatter_messages_Low_Bank (bank_balance);
                 Chatter_messages_High_Bank (bank_balance);
                 Chatter_messages_Neutral (bank_balance);
