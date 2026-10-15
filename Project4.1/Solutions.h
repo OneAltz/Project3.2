@@ -8,7 +8,7 @@
 //This Is the Funtion Prototype For No.1
 void print_game_rules (void);
 //This Is the Funtion Prototype For No.3
-double Get_bank_balance (int bank_balance);
+double get_bank_balance (int bank_balance);
 //This Is the Funtion Prototype For No.2
 double set_bank_balance (int bank_balance);
 //This Is the Funtion Prototype For No.3
