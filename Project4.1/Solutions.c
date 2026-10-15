@@ -9,8 +9,14 @@ void print_game_rules (void)
     printf("3. You roll two dice.\n");
     printf("4. The sum of the dice determines if you win, lose, or set a point.\n");
 }
-//This Is the Funtion Prototype For No.2
+//This Is the Funtion Prototype For No.3
 double get_bank_balance (int bank_balance)
+{
+    printf("This is your bank balance %d\n", bank_balance);
+    return bank_balance;
+}
+//This Is the Funtion Prototype For No.2
+double set_bank_balance (int bank_balance)
 {
     printf("What Do you Want you Bank Balance To be: \n");
     scanf("%d", &bank_balance);

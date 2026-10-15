@@ -4,6 +4,8 @@ int main(void)
 {
 int num = 0, bank_balance = 0, wager = 0, money_back = 2;
 srand((unsigned int) time(NULL));
+set_bank_balance (bank_balance);
+
     while  (num != 3)
     {
         printf("Do you want to:\n");
