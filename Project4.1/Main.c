@@ -2,7 +2,7 @@
 
 int main(void)
 {
-int num = 0, bank_balance = 100, wager = 0, money_back = 2, index = 0;
+int num = 0, bank_balance = 100, wager = 0, money_back = 2;
 srand((unsigned int) time(NULL));
     while  (num != 3)
     {
@@ -42,9 +42,8 @@ srand((unsigned int) time(NULL));
                 printf("Did You Win? %d \n", win);
                 if(win == 0)
                 {
-                    while (((money_back != 0) && (money_back != -1)) && (index != 3))
+                    while ((money_back != 0) && (money_back != -1))
                     {
-                    ++index;
                     int die3_value = roll_die();
                     int die4_value = roll_die();
                     printf("This Is Your Third Roll %d \n", die3_value);
