@@ -24,7 +24,7 @@ srand((unsigned int) time(NULL));
             printf("2. Roll\n");
             printf("3. Cash Out Your Winings\n");
             scanf("%d", &num);
-            if(num == 1)
+                if(num == 1)
                 {
                 get_bank_balance (bank_balance);
                 }
@@ -40,9 +40,10 @@ srand((unsigned int) time(NULL));
                 printf("This Is you Die sum %d \n", sum_dice); 
                 int win = is_win_loss_or_point(sum_dice);
                 printf("Did You Win? %d \n", win);
+                int point_value = sum_dice;
                 if(win == 0)
                 {
-                   while (result == -1)
+                    while (result == -1)
                     {
                     int die3 = roll_die();
                     int die4 = roll_die();
@@ -59,9 +60,10 @@ srand((unsigned int) time(NULL));
                 Chatter_messages_Low_Bank (bank_balance);
                 Chatter_messages_High_Bank (bank_balance);
                 Chatter_messages_Neutral (bank_balance);
+                }
             }
-        }
 
+        }
     }
 return 0;
 }
