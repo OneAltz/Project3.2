@@ -19,7 +19,6 @@ srand((unsigned int) time(NULL));
         {
             while (num != 3)
             {
-            ++index;
             printf("Do you want to:\n");
             printf("1. Print Your Bank Balance\n");
             printf("2. Roll\n");
