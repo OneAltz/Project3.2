@@ -56,6 +56,14 @@ srand((unsigned int) time(NULL));
                     result = is_point_loss_or_neither(sum, point_value);
                     printf("Result: %d\n", result);
                     }
+                    if (result == 1)
+                    {
+                    printf("You Win!\n");
+                    }
+                    else if (result == -1)
+                    {
+                    printf("You Lose!\n");
+                    }
                 bank_balance = adjust_bank_balance (bank_balance, wager, result);
                 get_bank_balance (bank_balance);
                 }
