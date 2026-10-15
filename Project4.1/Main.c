@@ -71,6 +71,7 @@ bank_balance = set_bank_balance (bank_balance);
                 }
                 bank_balance = adjust_bank_balance (bank_balance, wager, win);
                 get_bank_balance (bank_balance);
+                Chatter_Messages_Win_Loss (win);
                 Chatter_messages_Low_Bank (bank_balance);
                 Chatter_messages_High_Bank (bank_balance);
                 Chatter_messages_Neutral (bank_balance);

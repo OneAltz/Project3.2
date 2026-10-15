@@ -102,23 +102,8 @@ double adjust_bank_balance (double bank_balance, double wager, int win)
     return bank_balance;
 }
 
-//Is the Funtion Prototype For No.10
-/*double double_or_nothing (double bank_balance, double wager_amount, int add_or_subtract)
-{
-    if (!won) {
-        *consecutive_wins = 0;
-        return 0.0;
-    }
-    ++*consecutive_wins;
-    if (*consecutive_wins < 2) {
-        return 0.0;  // First win: wait for the next result
-    }
-    *consecutive_wins = 0;
-    return wager_amount * 2.5;  // Payout after the second consecutive win
-}
-*/
 //Is the Funtion Prototype For No.13
-void Chatter_Messages_Win_Loss (int number_rolls, int win_loss_neither, double initial_bank_balance, double current_bank_balance)
+void Chatter_Messages_Win_Loss (int win)
 {
     if (win_loss_neither == 1) {
         printf("You won.... Your Such a LOSER\n");
