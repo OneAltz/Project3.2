@@ -49,8 +49,9 @@ srand((unsigned int) time(NULL));
                     printf("This Is Your Third Roll %d \n", die3_value);
                     printf("This Is Your Forth Roll %d \n", die4_value);
                     int point_value = calculate_sum_dice(die3_value, die4_value);
-                    printf("This Is you Die sum %d \n", point_value);
+                    printf("This Is you Point Value sum %d \n", point_value);
                     money_back = is_point_loss_or_neither (sum_dice, point_value);
+                    return 0;
                     }
                 }
                 bank_balance = adjust_bank_balance (bank_balance, wager, win);
