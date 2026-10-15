@@ -44,8 +44,8 @@ srand((unsigned int) time(NULL));
                 int point_value = sum_dice;
                 if(win == 0)
                 {
-                    int result = -1;
-                    while (result == -1)
+                    int result = 0;
+                    while (result == 0)
                     {
                     int die3 = roll_die();
                     int die4 = roll_die();
