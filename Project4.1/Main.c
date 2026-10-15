@@ -2,7 +2,7 @@
 
 int main(void)
 {
-int num = 0, bank_balance = 100, wager = 0, money_back = 0;
+int num = 0, bank_balance = 100, wager = 0, money_back = 0, index = 0;
 srand((unsigned int) time(NULL));
     while  (num != 3)
     {
@@ -42,8 +42,9 @@ srand((unsigned int) time(NULL));
                 printf("Did You Win? %d \n", win);
                 if(win == 0)
                 {
-                    while ((money_back != 0)||(money_back != -1))
+                    while (((money_back != 0) && (money_back != -1)) && (index != 3))
                     {
+                    ++index;
                     int die3_value = roll_die();
                     int die4_value = roll_die();
                     printf("This Is Your Third Roll %d \n", die3_value);
@@ -51,7 +52,6 @@ srand((unsigned int) time(NULL));
                     int point_value = calculate_sum_dice(die3_value, die4_value);
                     printf("This Is you Point Value sum %d \n", point_value);
                     money_back = is_point_loss_or_neither (sum_dice, point_value);
-                    return 0;
                     }
                 }
                 bank_balance = adjust_bank_balance (bank_balance, wager, win);
