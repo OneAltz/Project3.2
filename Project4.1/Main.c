@@ -2,7 +2,7 @@
 
 int main(void)
 {
-int num = 0, bank_balance = 0, wager = 0, money_back = 2;
+int num = 0, bank_balance = 0, wager = 0;
 srand((unsigned int) time(NULL));
 bank_balance = set_bank_balance (bank_balance);
 
@@ -41,7 +41,14 @@ bank_balance = set_bank_balance (bank_balance);
                 int sum_dice = calculate_sum_dice(die1_value, die2_value);
                 printf("This Is you Die sum %d \n", sum_dice); 
                 int win = is_win_loss_or_point(sum_dice);
-                printf("Did You Win? %d \n", win);
+                if (win == 1)
+                    {
+                    printf("You Win!\n");
+                    }
+                    else if (win == -1)
+                    {
+                    printf("You Lose!\n");
+                    }
                 
                 int point_value = sum_dice;
                 if(win == 0)
@@ -56,7 +63,7 @@ bank_balance = set_bank_balance (bank_balance);
                     printf("Fourth Roll: %d\n", die4);
                     printf("Dice Sum: %d\n", sum);
                     result = is_point_loss_or_neither(sum, point_value);
-                    printf("Result: %d\n", result);
+                    //printf("Result: %d\n", result);
                     }
                     if (result == 1)
                     {
