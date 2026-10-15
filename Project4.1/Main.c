@@ -42,7 +42,7 @@ srand((unsigned int) time(NULL));
                 printf("Did You Win? %d \n", win);
                 if(win == 0)
                 {
-                    while ((money_back != 0) && (money_back != -1))
+                    while ((money_back != 0) || (money_back != -1))
                     {
                     int die3_value = roll_die();
                     int die4_value = roll_die();
