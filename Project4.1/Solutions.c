@@ -105,9 +105,9 @@ double adjust_bank_balance (double bank_balance, double wager, int win)
 //Is the Funtion Prototype For No.13
 void Chatter_Messages_Win_Loss (int win)
 {
-    if (win_loss_neither == 1) {
+    if (win == 1) {
         printf("You won.... Your Such a LOSER\n");
-    } else if (win_loss_neither == 0) {
+    } else if (win == -1) {
         printf("I Knew you would lose\n");
     }
 }
