@@ -37,17 +37,13 @@ int check_wager_amount (double wager, double bank_balance)
     {
         if (wager > bank_balance) {
             printf("Error: Wager amount cannot exceed your bank balance.\n");
-            return -1;
         }
         if (wager == bank_balance){
             printf("Aren't you a risky!\n");
-            return -1;
         }
         if (wager < 0){
             printf("Error: You Have to put a wager.\n");
-            return -1;
         }
-        return 0;
     } while (wager <= bank_balance);
     return wager;
 }
