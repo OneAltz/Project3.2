@@ -33,7 +33,7 @@ bank_balance = set_bank_balance (bank_balance);
                 if (num == 2)
                 {
                 wager1 = get_wager_amount ();
-                wager = check_wager_amount (wager, bank_balance);
+                wager = check_wager_amount (wager1, bank_balance);
                 int die1_value = roll_die();
                 int die2_value = roll_die();
                 printf("This Is Your Second Roll %d \n", die1_value);
